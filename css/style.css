@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amatic SC', cursive;
+}
+
+/*Levels*/
+#level {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/*Game field*/
+#gameField {
+    width: 500px;
+    height: 200px;
+    border: 5px solid #000;
+    overflow: hidden;
+    margin: 50px auto;
+}
+#background {
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    z-index: -1;
+    background-image: url("../img/background.png");
+    background-origin: border-box;
+    background-repeat: repeat;
+    background-size: contain;
+    overflow: hidden;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-name: background;
+}
+@keyframes background {
+    0% {
+        background-position: 500px 0;
+    }
+}
+
+/*Dino*/
+#dino {
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/dino.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 100px;
+}
+.animateDino {
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-name: dinoJump;
+}
+@keyframes dinoJump {
+    0% {
+        top: 100px;
+    }
+    30% {
+        top: 30px;
+    }
+    50% {
+        top: 20px;
+    }
+    70% {
+        top: 30px;
+    }
+    100% {
+        top: 100px;
+    }
+}
+
+/*Cactus*/
+#cactus {
+    background-image: url("../img/cactus.png");
+    position: relative;
+    top: 40px;
+}
+.animateCactus {
+    width: 60px;
+    height: 60px;
+    left: 440px;
+    background-size: cover;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: cactus;
+}
+@keyframes cactus {
+    0% {
+        left: 440px;
+    }
+    100% {
+        left: -60px;
+    }
+}
+.animateCactus2Level {
+    width: 120px;
+    height: 60px;
+    left: 380px;
+    background-size: contain;
+    animation-delay: 500ms;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: doubleCactus;
+}
+.animateCactus3Level {
+    width: 120px;
+    height: 60px;
+    left: 380px;
+    background-size: contain;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: doubleCactus;
+}
+@keyframes doubleCactus {
+    0% {
+        left: 380px;
+    }
+    100% {
+        left: -120px;
+    }
+}
+
+/*Rules*/
+.rules {
+    width: 400px;
+    margin: 0 auto;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+}
+
+/*Reload button*/
+#reloadBtn {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/reload.png");
+    background-size: cover;
+    position: relative;
+    top: -105px;
+    left: 200px;
+}
+#reloadBtn:hover {
+    width: 105px;
+    height: 105px;
+    cursor: pointer;
+}
+
+/*Score*/
+#scoreBlock div {
+    display: inline-block;
+}
+#scoreBlock {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    background-color: #000000;
+    opacity: 50%;
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+}
+
+/*Game message*/
+.gameMessage {
+    display: none;
+    font-size: 50px;
+    color: red;
+    text-align: center;
+}

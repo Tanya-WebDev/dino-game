@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" onclick="dinoJump()">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dino Game</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div id="level">Level <span id="levelNumber">1</span></div>
+<div id="gameOver" class="gameMessage">Game over!</div>
+<div id="victory" class="gameMessage">Your win!</div>
+<div id="gameField">
+    <div id="background"></div>
+    <div id="scoreBlock">
+        <div>Score is:</div>
+        <div id="score">0</div>
+    </div>
+    <div id="dino"></div>
+    <div id="cactus" class="animateCactus"></div>
+    <div id="reloadBtn" onclick="location.reload()"></div>
+</div>
+<div class="rules">
+    <p>Control your Dino jumping by using mouse's left button.</p>
+    <p>The rules are very easy: Dino have to jump over moving cacti or you will lose the game.</p>
+    <p>Have fun!</p>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
